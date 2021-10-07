@@ -5,8 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v2
-      - name: 'Iniciar docker-compose'
-        run: docker-compose -f docker-compose.yml up
+      - run: ls -l
+      - name: 'Iniciar docker_compose'
+        run: docker-compose -f docker_compose.yml up
       - name: 'Listar los contenedores en ejecucion'
         run: docker ps -a
       - name: 'Mostrar la bitacora de inicio '
